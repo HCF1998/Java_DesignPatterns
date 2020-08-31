@@ -1,4 +1,4 @@
-package com.javaDesignPattern.singleTon;
+package com.javaDesignPattern.singleton;
 
 /**
  * 单例模式：确保程序中的一个类最多只有一个实例
