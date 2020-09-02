@@ -10,6 +10,7 @@ public class Charge {
         this.checkWord = checkWord;
     }
     public void totalCharge(){
+        //getAmount():advertisement.length()+basicAmount;
         System.out.println("广告费用："+checkWord.getAmount()*basicCharge+"元");
     }
 }
