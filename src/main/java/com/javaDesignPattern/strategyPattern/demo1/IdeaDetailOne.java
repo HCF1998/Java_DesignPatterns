@@ -1,4 +1,4 @@
-package com.javaDesignPattern.strategy.demo1;
+package com.javaDesignPattern.strategyPattern.demo1;
 
 public class IdeaDetailOne extends AbstractIdea {
     @Override
