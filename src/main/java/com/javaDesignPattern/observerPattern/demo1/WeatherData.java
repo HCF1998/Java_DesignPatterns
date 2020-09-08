@@ -3,12 +3,17 @@ package com.javaDesignPattern.observerPattern.demo1;
 import java.util.ArrayList;
 
 public class WeatherData implements Subject {
+    //存放观察者
     private ArrayList<Observer> observers;
 
-    private float temperateure;
+    /**
+     * 温度，湿度，气压
+     */
+    private float temperature;
     private float humidity;
     private float pressure;
 
+    //引用观察者
     public WeatherData(){
         observers = new ArrayList<Observer>();
     }
@@ -25,11 +30,13 @@ public class WeatherData implements Subject {
             observers.remove(i);
     }
 
+    //通知观察者更新
     @Override
     public void notifyObservers() {
         for (int i=0;i<observers.size();i++){
             Observer observer = (Observer)observers.get(i);
-            observer.update(temperateure,humidity,pressure);
+            //更新数据
+            observer.update(temperature,humidity,pressure);
         }
     }
 
@@ -41,7 +48,7 @@ public class WeatherData implements Subject {
     }
 
     public void setMeasurements(float temperateure,float humidity,float pressure){
-        this.temperateure = temperateure;
+        this.temperature = temperateure;
         this.humidity = humidity;
         this.pressure = pressure;
         measurementsChanged();

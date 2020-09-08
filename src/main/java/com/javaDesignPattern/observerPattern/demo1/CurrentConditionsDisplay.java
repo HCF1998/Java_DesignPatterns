@@ -8,6 +8,7 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
 
     public CurrentConditionsDisplay(Subject weatherData) {
         this.weatherData = weatherData;
+        //注册观察者进主题
         weatherData.registerObserver(this);
     }
 
@@ -19,7 +20,7 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
 
     @Override
     public void update(float temp, float humidity, float pressure) {
-        temperateure = temp;
+        this.temperateure = temp;
         this.humidity = humidity;
         this.pressure = pressure;
         display();
