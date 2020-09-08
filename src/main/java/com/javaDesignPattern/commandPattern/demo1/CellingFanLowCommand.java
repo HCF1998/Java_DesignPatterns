@@ -1,5 +1,8 @@
 package com.javaDesignPattern.commandPattern.demo1;
 
+/**
+ * 不同速度的具体命令
+ */
 public class CellingFanLowCommand implements Command{
     CellingFan cellingFan;
     int preSpeed;
