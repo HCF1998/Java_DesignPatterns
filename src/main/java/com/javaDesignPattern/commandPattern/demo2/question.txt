@@ -1,0 +1,11 @@
+题目：系统提供一系列功能键，用户可以自定义功能键的功能；例如功能键FunctionButton可以用于退出系统
+        （由SystemExitClass类来实现），也可以用于显示帮助文档（由DisplayHelpClass类来实现）
+    用户通过修改配置文件改变功能键的用途，使用命令模式设计该系统，使得功能键类与功能类之间解耦，可为
+    同一个功能键设置不同的功能;
+
+    Function:请求调用者
+    SystemExitClass:请求接收者
+    DisplayHelpClass:请求接收者
+    Command:抽象命令类
+    ExitCommand:具体命令类
+    HelpCommand:具体命令类
