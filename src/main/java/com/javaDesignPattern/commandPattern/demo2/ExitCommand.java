@@ -7,7 +7,7 @@ public class ExitCommand extends Command {
     //维持对请求接收者的引用
     private SystemExitClass seObj;
 
-    public ExitCommand(SystemExitClass seObj) {
+    public ExitCommand() {
         seObj = new SystemExitClass();
     }
     //命令执行方法，将调用请求接收者的业务方法
